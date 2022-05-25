@@ -1,0 +1,64 @@
+
+  .iteraciones{
+    background-color:gray;
+    border-radius: 20px;
+  }
+  .form-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 0;
+  }
+  
+  .mi-input {
+    width: 48%;
+    min-width: 150px;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mi-input input {
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 45px 35px;
+    width: 100%;
+  }
+  
+  .mi-flex-center {
+    align-items: center;
+  }
+  
+  .especial {
+    border-radius: 5px;
+    padding: 45px 35px;
+    width: 40%;
+    text-align: right;
+    border: 2px solid black;
+  }
+  
+  .resultado {
+    border-radius: 5px;
+    padding: 45px 45px;
+    width: 40%;
+    text-align: right;
+    border: 2px solid #0d6efd;
+  }
+  .resultados{
+    text-align: center;
+    justify-content: center;
+  }
+  .nombres {
+    text-align: center;
+  }
+  
+  .calculator-display {
+    padding: 25px 15px;
+    width: 100%;
+    text-align: right;
+    border: 1px solid gray;
+  }
+  
+  .formularioBiseccion {
+    height: 450px;
+  }
