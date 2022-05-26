@@ -1,8 +1,5 @@
-function refreshRegla() {
-  let result = document.getElementById("Result");
-  result.innerHTML = "";
-  document.getElementById("resultados").style.display = "none";
-  formularioRegla.reset();
+function refreshSustitucion() {
+    formularioSecante.reset();
 }
 
 function formula() {
@@ -16,15 +13,17 @@ function formula() {
   let xa=0;
   let porcentualError = 0;
   let iteracion = 0;
-//if (xi == '' || xu == '' || error == '') {
-// result.innerHTML ="<h1>NO HAY DATOS</h1>";
-//} else {
+  //if (xi == '' || xu == '' || error == '') {
+  //result.innerHTML ="<h1>NO HAY DATOS</h1>";
+  //} else {
   do {
     iteracion++
 
+    //Sacar los valores de FXI y FXU
     let fXI = (xi * Math.exp(xi)) - 1;
     let fXU = (xu * Math.exp(xu)) - 1;
 
+    //aplicar la formula de regla falsa
     let xr = xu - (((xi - xu) * fXU) / (fXI - fXU));
 
     //xa = xr;
@@ -34,10 +33,11 @@ function formula() {
     let fXR = (xr * Math.exp(xr)) - 1;
 
     if (fXR < 0) {
-      xi = xa;
+        xi = xa;
     } else {
-      xu = xr;
+        xu = xr;
     }
+
     //EVALUAR NUEVO INTERVALO PARA IMPRIMIRLO
     let nuevoIntervalo = 0;
     if (Math.sign(fXI) === -1 && Math.sign(fXR) === 1) {
@@ -49,4 +49,6 @@ function formula() {
 
     result.innerHTML += `<h2>ITERACIÓN ${iteracion}</h2><p><b>XR = </b>${xr}<br><b>Error = </b>${porcentualError}%<br><br><b>Fxi(${xi}) = </b>${fXI}<br><b>Fxr(${xr}) = </b>${fXR}<br><b>Fxu(${xu}) = </b>${fXU}<br><br><b>Siguiente Intervalo = </b>${nuevoIntervalo}</p><br>`;
   } while (porcentualError >= error);
+//}
+
 }
