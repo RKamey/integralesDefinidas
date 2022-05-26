@@ -17,15 +17,10 @@
     <div class="d-flex justify-content-center px-5 py-4 tab-content">
       <div class="text-center">
 
-        <div id="sustitucion">
-          <form class="form-container" id="formularioSustitucion">
+        <div id="regla">
+          <form class="form-container" id="formularioRegla">
             <div class="mi-input d-flex flex-row form-container form-floating bd-highlight mb-3">
-              <div class="figure center">
-                <img src="formula.png"
-                     width="500"
-                     height="128">
-              </div>
-              
+              <div class="figure center"><img src="img/formula.png" width="35%"></div>
             </div>
 
             <div class="mi-input d-flex flex-row form-container form-floating bd-highlight mb-3 outline-primary w-100">
@@ -44,18 +39,18 @@
             </div>
 
             <input type="button" class="btn btn-outline-primary w-100" name="Calcular" value="Calcular" onclick="formula()">
-            <input type="button" class="btn btn-outline-secondary w-100" name="Limpiar" value="Limpiar valores" onclick="refreshSecante()">
+            <input type="button" class="btn btn-outline-secondary w-100" name="Limpiar" value="Limpiar valores" onclick="refreshRegla()">
           </form>
 
-          <div class="tabsContent" style="display:none" id="resultados">
-            <span class="badge bg-secondary"><h2 class="tabsTitle">Resultados</h2></span>
+          <div class="tabsContent pt-3" style="display:none" id="resultados">
+            <span class="badge bg-danger"><h2 class="tabsTitle">Resultados</h2></span>
             <p class="tabsText">
             </p>
             <div class="alertResult" id="Result"></div>
           </div>
 
           <div class="container-fluid">
-            <button href="#" style="position: fixed;bottom: 5%;left: 3%;" class="btn btn-dark px-4 py-2" onclick="window.location='index.html'">Regresar</button>
+            <button href="#" style="position: fixed;bottom: 1%;left: 3%;" class="btn btn-dark px-4 py-2" onclick="window.location='index.html'">Regresar</button>
           </div>
       </div>
     </div>

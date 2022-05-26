@@ -52,4 +52,3 @@ function formulaTres() {
     document.getElementById("resultadoTres").value = resultadoTres;
     return resultadoTres;
 }
-
